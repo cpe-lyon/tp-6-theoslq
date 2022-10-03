@@ -17,6 +17,7 @@ Sous-réseau 7 : 25 machines | 172.16.1.128   /27 | 172.16.1.159 | 172.16.1.129 
 1.  
 2.  
 3.  
+4.
 
 **Exercice 3. Installation DHCP**
 
