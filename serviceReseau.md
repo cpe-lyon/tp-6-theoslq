@@ -14,23 +14,38 @@ Sous-réseau 7 : 25 machines | 172.16.1.128   /27 | 172.16.1.159 | 172.16.1.129 
 
 **Exercice 2. Préparation de l'environnement**  
 
-1.  
-2.  
-3.  
+1. 
+![image](https://user-images.githubusercontent.com/97438358/193532644-1de9721c-90c2-4dc7-a73a-f09cf76b754a.png)
+![image](https://user-images.githubusercontent.com/97438358/193533893-ddac7d8a-b502-4ad9-bb0e-770c09e44dc9.png)  
+2.
+L'interface lo correspond à loopback, boucle locale.  
+![image](https://user-images.githubusercontent.com/97438358/193534322-179c95ad-057b-454e-8ca1-94e103ac914d.png)  
+3.
+```console
+User@localhost:~$ sudo apt remove cloud-init
+```  
 4.
-
+```console
+User@localhost:~$ sudo hostnamectl set-hostname serveur
+```
+![image](https://user-images.githubusercontent.com/97438358/193543933-4fb36568-5ca9-421c-b667-cbbac7757021.png)  
 **Exercice 3. Installation DHCP**
 
-1.
+1. 
+```console
+User@serveur:~$ sudo apt install isc-dhcp-server
+User@serveur:~$ systemctl status isc-dhcp-server
+```
 2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
 
 **Exercice 4. Donner un accès à Internet au client**
 
