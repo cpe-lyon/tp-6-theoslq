@@ -37,36 +37,106 @@ User@serveur:~$ sudo apt install isc-dhcp-server
 User@serveur:~$ systemctl status isc-dhcp-server
 ```
 2.
+```console
+User@serveur:~$ sudo nano /etc/netplan/50-cloud-init.yaml
+network:
+  ethernets:
+      ens192:
+          dhcp4: true
+          match:
+              macaddress: 00:50:56:89:3a:1d
+          set-name: ens192
+       ens224:
+           dhcp4: true
+           addresses: [192.168.100.1/24]
+           nameservers:
+               addresses: [8.8.8.8, 1.1.1.1]
+  version: 2
+```
 3. 
+```console
+User@serveur:~$ sudo cp dhcpd.conf dhcpd.conf.bak
+default-lease-time : temps par défaut
+max-lease-time 600 : temps maximal du bail (date de fin de validité)
+```
 4. 
+```console
+User@serveur:~$ sudo nano /etc/default/isc-dhcp-server
+```
+<img width="128" alt="image" src="https://user-images.githubusercontent.com/97438358/194771389-bf2949c4-119b-406f-8995-5966a35b35d4.png">  
+
 5. 
+```console
+User@serveur:~$ dhcpd -t
+User@serveur:~$ sudo systemctl restart isc-dhcp-server
+```
 6. 
+```console
+
+```
 7. 
+```console
+
+```
 8. 
+```console
+
+```
 9. 
+```console
+
+```
 10. 
-11. 
+```console
 
-**Exercice 4. Donner un accès à Internet au client**
-
-1.
-2.
-
-**Exercice 5. Installation du serveur**
+```
+**Exercice 4. Donner un accès à Internet au client**  
 
 1.
+```console
+
+```
 2.
+```console
+
+```
+**Exercice 5. Installation du serveur**  
+
+1.
+```console
+
+```
+2.
+```console
+
+```
 3.
-4.
+```console
 
-**Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local**
+```
+4.
+```console
+
+```
+**Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local**  
 
 1.
+```console
+
+```
 2.
+```console
+
+```
 3.
+```console
+
+```
 4.
+```console
+
+```
 5.
+```console
 
-**Exercice 7. Installation d'un serveur web**
-
-**Exercice 8. Installation d'un serveur de temps**
+```
